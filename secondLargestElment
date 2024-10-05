@@ -1,0 +1,31 @@
+public class SecondLargest {
+    public static Integer findSecondLargest(int[] arr) {
+        if (arr.length < 2) {
+            return null; // Not enough elements
+        }
+
+        int first = null, second = null;
+
+        for (int number : arr) {
+            if (first == null || number > first) {
+                second = first;
+                first = number;
+            } else if (number != first && (second == null || number > second)) {
+                second = number;
+            }
+        }
+
+        return second; // Will return null if no second largest exists
+    }
+
+    public static void main(String[] args) {
+        int[] array = {12, 35, 1, 10, 34, 1};
+        Integer secondLargest = findSecondLargest(array);
+        
+        if (secondLargest != null) {
+            System.out.println("The second largest number is: " + secondLargest);
+        } else {
+            System.out.println("There is no second largest number.");
+        }
+    }
+}
