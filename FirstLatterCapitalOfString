@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class FirstLetterCaptile {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a String");
+        String str=sc.nextLine();
+        if(str==null){
+            System.out.println("String is empty");
+        }
+        else {
+            String [] words=str.split(" ");
+            StringBuilder captilizestring=new StringBuilder();
+            for(String word:words){
+                String str1=Character.toUpperCase(word.charAt(0))+word.substring(1);
+                captilizestring.append(str1+" ");
+
+            }
+            System.out.println(captilizestring);
+        }
+    }
+}
