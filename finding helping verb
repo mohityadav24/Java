@@ -1,0 +1,23 @@
+
+import java.util.*;
+class findhelpingverb{
+
+public static void main(String arg[]){
+ String hverb[]={"am","are","is","have","has","had","was","were","been","do","did","done"};
+ 
+ Scanner sc = new Scanner(System.in);
+ 
+ String str = sc.nextLine();
+ 
+ String p_arr[]=str.split(" "); 
+
+  for(int i = 0; i<hverb.length;i++){
+   	for(int j = 0; j<p_arr.length;j++){
+		    if(hverb[i].equals(p_arr[j])){
+		       	System.out.println(hverb[i]);
+		    }
+	   }
+  }
+  
+ }
+}
