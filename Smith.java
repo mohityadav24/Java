@@ -39,33 +39,36 @@ for(int i=2;i<=copy;){
 
 }
 */
+
+// by using methods finding smith number 
 import java.util.*;
 
 class demo{
 	
-	int sumDigit(int n)
+int sumDigit(int n)
 	{
-		int sum = 0;
-		while(n>0)
-		{
-			sum+= n%10;
-			n/=10;
-		}
-		return sum;
+	 int sum = 0;
+	 while(n>0)
+	 {
+	  	sum+= n%10;
+		n/=10;
+	 }
+	return sum;
 	}
 	
-	int primeFactor(int n)
+int primeFactor(int n)
 	{
-		int i = 2;
+	int i = 2;
         int sum = 0;
-       while(n>1)
+        while(n>1)
 	   {
-			if(n%i==0)
+		if(n%i==0)
 			{
-				sum = sum + sumDigit(i);
-				n/=i;
-			}else{
-				i++;
+			sum = sum + sumDigit(i);
+			n/=i;
+			}
+		 else{
+			i++;
 			} 
 	   }
 	   return sum;
@@ -74,7 +77,6 @@ class demo{
 	public static void main(String arg[]){
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a Number : ");
-		
 		int n = sc.nextInt();
 		
 		demo obj = new demo();
@@ -83,11 +85,11 @@ class demo{
 		int b = obj.sumDigit(n);
 		
 		if(a==b){
-			System.out.println("Number is prime");
-	}
-	else{
+		System.out.println("Number is prime");
+	    }
+     		else{
 		System.out.println("Number is not prime");
-	}
+		}
 		
 		
 	}
